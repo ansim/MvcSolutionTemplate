@@ -1,0 +1,34 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>MVC Solution Architecture Service</Name>
+    <Description>MVC Solution Architecture: Business Logic Layer</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MvcProjectTemplate.Service</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="MvcProjectTemplate.Service.csproj" File="MvcProjectTemplate.Service.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <Folder Name="DataProvider" TargetFolderName="DataProvider">
+        <ProjectItem ReplaceParameters="true" TargetFileName="EFProvider.cs">EFProvider.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IEFProvider.cs">IEFProvider.cs</ProjectItem>
+      </Folder>
+      <Folder Name="DataServices" TargetFolderName="DataServices">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AspNetIdentityManagers.cs">AspNetIdentityManagers.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AspNetIdentityStores.cs">AspNetIdentityStores.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

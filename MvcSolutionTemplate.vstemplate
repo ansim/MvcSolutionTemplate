@@ -1,0 +1,40 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>MVC Solution Architecture Template v1.0.0</Name>
+    <Description>MVC solution architecture template</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>MvcWebPortal</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>MvcProjectTemplate.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+	  <SolutionFolder Name="3 Presentation">
+      		<ProjectTemplateLink ProjectName="$safeprojectname$.Web" CopyParameters="true">
+        		MvcProjectTemplate.Web\CSharp.vstemplate
+      	  	</ProjectTemplateLink>
+	  </SolutionFolder>
+	 <SolutionFolder Name="2 Business Logic">
+      		<ProjectTemplateLink ProjectName="$safeprojectname$.DomainModel" CopyParameters="true">
+        		MvcProjectTemplate.DomainModel\CSharp.vstemplate
+      		</ProjectTemplateLink>
+      		<ProjectTemplateLink ProjectName="$safeprojectname$.Service" CopyParameters="true">
+        		MvcProjectTemplate.Service\CSharp.vstemplate
+      		</ProjectTemplateLink>
+	  </SolutionFolder>
+ 	  <SolutionFolder Name="1 Data">
+      		<ProjectTemplateLink ProjectName="$safeprojectname$.Data" CopyParameters="true">
+        		MvcProjectTemplate.Data\CSharp.vstemplate
+      		</ProjectTemplateLink>
+	  </SolutionFolder>
+	  <SolutionFolder Name="0 Utility">
+	  </SolutionFolder>	  
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>
